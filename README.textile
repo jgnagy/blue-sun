@@ -1,0 +1,44 @@
+h1. *{color:#00e}Blue Sun* info
+
+h2. Introduction
+
+*{color:#00e}Blue Sun* is attempt at a feature rich BitTorrent tracker and index in a single Ruby on Rails application. It is still *very* new, and as such should not be used for anything critical.
+
+The name *{color:#00e}Blue Sun* is inspired by the show "Firefly":http://en.wikipedia.org/wiki/Firefly_(TV_series) and The Blue Sun Corporation that knows (and is seemingly responsible) for all things bad in the 'verse. This application will be _tracking_ torrents and information about them, so it seemed like a good enough fit.
+
+h2. Purpose
+
+The purpose of *{color:#00e}Blue Sun* is to:
+
+# Learn more about the BitTorrent protocol.
+# Write (from what I can tell) the first public tracker written in Rails.
+# Hopefully make a popular project for both public and private BitTorrent tracking.
+
+With any luck, I'll eventually reach all these goals.
+
+h2. Licensing
+
+*{color:#00e}Blue Sun* is available under the GNU General Public License v3:
+
+Copyright 2011 "Jonathan Gnagy":http://over0.net/blog
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see "http://www.gnu.org/licenses/":http://www.gnu.org/licenses/.
+
+h2. Installation
+
+To install *{color:#00e}Blue Sun*, download the source, install any missing Ruby gems, then use @`rails`@ to start the server. More install info will be added later as there is actually something to run.
+
+h2. Project Status
+
+Current, *{color:#00e}Blue Sun* does *nothing* it's supposed to, since it is nothing more than a base Rails 3 project. I'll update this section as I do more work on the project.

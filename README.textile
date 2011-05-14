@@ -37,7 +37,7 @@ along with this program.  If not, see "http://www.gnu.org/licenses/":http://www.
 
 h2. Installation
 
-To install *{color:#00e}Blue Sun*, download the source, install any missing Ruby gems, then use @`rails`@ to start the server. More install info will be added later as there is actually something to run.
+To install *{color:#00e}Blue Sun*, download the source and install any missing Ruby gems. Then, you need to configure the app to your liking (meaning edit "config/initializers/devise.rb" to match your configuration). After that, use @`rails`@ to start the server. More install info will be added later as there is actually something to run.
 
 h2. Project Status
 

@@ -3,7 +3,7 @@ class CreateTorrents < ActiveRecord::Migration
     create_table :torrents do |t|
       t.string :name
       t.text :details
-      t.text :filename
+      t.string :filename
       t.integer :user_id
       t.text :hash
 

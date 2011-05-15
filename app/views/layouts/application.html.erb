@@ -7,11 +7,36 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div id="main">
+    <div id="nav">
+	    <div id="nav_menu">
+		    <div id="nav_menu_items">
+			    <span class="nav_section"><%= link_to "Torrents", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
+			    <span class="nav_section"><%= link_to "Tags", tags_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
+			    <span class="nav_section"><%= link_to "Admin", torrents_path %></span>
+		    </div>
+	    </div>
+    </div>
+	  <div id="user_info">
+		<% if user_signed_in? %>
+			Signed in as <span class="user_email"><%= current_user.email %></span>. <br />
+			Not you? <%= action_link :sign_out, destroy_user_session_path, :text => "Sign Out" %>
+		<% end %>
+	  </div>
+	  <div id="content">
+      <% if notice %>
+      	<div id="flash_notice"><%= notice %></div>
+      <% end%>
+      <% if alert %>
+      	<div id="flash_alert"><%= alert %></div>
+      <% end %>
 
-  <%= yield %>
-
-  <div id="footer">&nbsp;</div>
+      <%= yield %>
+      
+    </div>
+    <div id="footer">
+  	  <span class="disclaimer">For Rosetta use only.</span>
+  	</div>
+  </div>
 </body>
 </html>

@@ -29,11 +29,11 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: <%= "#{APP_CONFIG[:db][:adapter]}" %>
+  adapter: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:adapter] : 'jdbcmysql'}" %>
   encoding: utf8
   reconnect: false
-  database: <%= "#{APP_CONFIG[:db][:database]}" %>
-  pool: <%= "#{APP_CONFIG[:db][:pool_size]}" %>
-  username: <%= "#{APP_CONFIG[:db][:username]}" %>
-  password: <%= "#{APP_CONFIG[:db][:password]}" %>
-  socket: <%= "#{APP_CONFIG[:db][:socket]}" %>
+  database: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:database] : 'blue-sun_production'}" %>
+  pool: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:pool_size] : 5}" %>
+  username: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:username] : 'root'}" %>
+  password: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:password] : ''}" %>
+  socket: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:socket] : '/tmp/mysql.sock'}" %>

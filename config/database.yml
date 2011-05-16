@@ -32,8 +32,8 @@ production:
   adapter: jdbcmysql
   encoding: utf8
   reconnect: false
-  database: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:database] : 'blue-sun_production'}" %>
-  pool: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:pool_size] : 5}" %>
-  username: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:username] : 'root'}" %>
-  password: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:password] : ''}" %>
-  socket: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:socket] : '/tmp/mysql.sock'}" %>
+  database: blue-sun_production
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock

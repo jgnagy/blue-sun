@@ -1,6 +1,9 @@
 # Load the rails application
 require File.expand_path('../application', __FILE__)
 
+# Initialize the rails application
+BlueSun::Application.initialize!
+
 generic_config = {
   :db => {
     "adapter" => "jdbcmysql",
@@ -21,6 +24,3 @@ DATA_DIR.freeze
 FileUtils.mkdir_p(DATA_DIR) unless ENV['BLUESUN_HOME']
 
 generic_config = nil
-
-# Initialize the rails application
-BlueSun::Application.initialize!

@@ -6,6 +6,7 @@ gem 'rails', '3.0.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'activerecord-jdbcmysql-adapter'
+gem 'activerecord-jdbc-adapter'
 gem 'jdbc-mysql'
 
 # Use unicorn as the web server

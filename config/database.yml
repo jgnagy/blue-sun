@@ -29,7 +29,7 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:adapter] : 'jdbcmysql'}" %>
+  adapter: jdbcmysql
   encoding: utf8
   reconnect: false
   database: <%= "#{APP_CONFIG ? APP_CONFIG[:db][:database] : 'blue-sun_production'}" %>

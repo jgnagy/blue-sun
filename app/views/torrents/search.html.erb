@@ -1,0 +1,14 @@
+<% if @torrents.empty? %>
+  No torrents found containing '<%= @query %>'
+<% else %>
+<table>
+  <tr>
+    <th>ID</th><th>Name</th><th>Created</th>
+  </tr>
+  <% @torrents.each do |t| %>
+    <tr>
+      <td><%= t.id %></td><td><%= t.name %></td><td><%= t.created_at %></td>
+    </tr>
+  <% end %>
+<table>
+<% end %>

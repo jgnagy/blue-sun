@@ -1,0 +1,91 @@
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#flash_notice {
+    min-height: 50px;
+    padding: 10px;
+    padding-left: 65px;
+    border: 2px solid green;
+    background-color: #eeb;
+    background-image: url(../images/gnome/gnome-dialog-information.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    color: green;
+    font-weight: bolder;
+}
+
+#flash_warn {
+    min-height: 50px;
+    padding: 10px;
+    padding-left: 65px;
+    border: 2px solid orange;
+    background-color: #ffb;
+    background-image: url(../images/gnome/gnome-dialog-warning.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    color: orange;
+    font-weight: bolder;
+}
+
+#flash_alert {
+    min-height: 50px;
+    padding: 10px;
+    padding-left: 65px;
+    border: 2px solid #e44;
+    background-color: #ebb;
+    background-image: url(../images/gnome/gnome-emblem-bad.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    color: #f00;
+    font-weight: bolder;
+}
+
+.unimportant_dialog {
+    min-height: 50px;
+    padding: 10px;
+    padding-left: 65px;
+    border: 2px solid black;
+    background-color: #ddd;
+    background-image: url(../images/gnome/gnome-logviewer.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    display: block;
+    color: black;
+    font-weight: bolder;
+}

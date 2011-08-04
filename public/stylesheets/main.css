@@ -1,0 +1,143 @@
+/* Global Elements */
+body {
+	/* TODO: Set a background */
+	margin: 0px;
+	padding: 0px;
+	padding-top: 20px;
+	font-family: "Calibri", "Helvetica", "Verdana", Sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid #333;
+}
+
+table th, table td {
+	padding: 0.5em;
+	border: 1px dotted #666;
+	color: #191970;
+}
+
+table th {
+  	border-bottom: 2px solid #333;
+  	border-right: 2px solid #333;
+	color: #fff; 
+	background-color: #191970;
+}
+
+/* table tr:hover td {
+	background-color: #191970;
+	color: #fff;
+} */
+
+table caption {
+  	caption-side: bottom;
+  	font-size: 0.9em;
+  	font-style: italic;
+  	text-align: right;
+  	padding: 0.5em 0;
+}
+
+a {
+	text-decoration: none;
+	color: #009ddc;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: navy;
+}
+
+h1 {
+	color: #009ddc;
+}
+
+/* Custom Elements */
+#main {
+	width: 1000px;
+	/* TODO: Set a background */
+	padding-top: 3em;
+	padding-left: 2em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#user_info {
+	text-align: right;
+	margin-bottom: 10px;
+	float: right;
+}
+
+#user_info .user_email {
+	font-size: 0.9em;
+}
+
+#content {
+	width: 830px;
+	float: left;
+}
+
+#nav {
+	margin-top: -3em;
+	padding-left: 10px;
+	/* width: 150px; */
+	float: right;
+	background: #fff url("/images/navbar_left.png") top left no-repeat;
+}
+
+#nav_menu {
+	height: 38px;
+	padding-right: 10px;
+	background: #fff url("/images/navbar_right.png") top right no-repeat;
+}
+
+#nav_menu_items {
+	height: 38px;
+	background: #fff url("/images/navbar_bg.png");
+	margin: 0px;
+}
+
+.nav_section {
+	display: inline-block;
+	padding-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+}
+
+.nav_section:hover {
+	display: inline-block;
+	padding-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+}
+
+.nav_section a {
+	color: #555;
+}
+
+.nav_section a:hover {
+	text-decoration: underline;
+	/* color: #009ddc; */
+}
+
+.nav_rule {
+	padding-top: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+	height: 18px;
+	float: left;
+}
+
+img.links {
+	width: 24px;
+}
+
+#footer {
+	clear: both;
+}
+
+#footer .disclaimer {
+	font-style: italic;
+}

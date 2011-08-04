@@ -1,0 +1,28 @@
+<%= form_for @torrent, :html => {:multipart => true} do |f| %>
+  <% if @torrent.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@torrent.errors.count, "error") %> prohibited this torrent from being saved:</h2>
+    <ul>
+    <% @torrent.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.file_field :filename %>
+    <%= f.hidden_field :filename_cache %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_area :details, :size => "45x6" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

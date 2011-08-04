@@ -93,6 +93,7 @@ class TorrentsController < ApplicationController
     
     respond_to do |format|
       if @torrent.update_attributes(params[:torrent])
+        # TODO: perform some indexing in SOLR / lucene / sphinx at some point
         format.html { redirect_to(@torrent, :notice => 'Torrent was successfully updated.') }
         format.xml { render :xml => @torrent, :status => :created, :location => @torrent }
         format.json { render :json => @torrent, :status => :created, :location => @torrent }

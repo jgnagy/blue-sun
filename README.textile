@@ -41,4 +41,4 @@ To install *{color:#00e}Blue Sun*, download the source and install any missing R
 
 h2. Project Status
 
-Current, *{color:#00e}Blue Sun* does *nothing* it's supposed to, since it is nothing more than a base Rails 3 project. I'll update this section as I do more work on the project.
+Currently, *{color:#00e}Blue Sun* does *nothing* it's supposed to, since it is nothing more than a base Rails 3 project. I'll update this section as I do more work on the project.

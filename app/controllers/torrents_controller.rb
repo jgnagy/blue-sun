@@ -16,6 +16,34 @@ class TorrentsController < ApplicationController
     end
   end
   
+  def create
+    @torrent = Torrent.new(params[:torrent])
+    
+    respond_to do |format|
+      if @torrent.save
+        # TODO: perform some indexing in SOLR / lucene / sphinx at some point
+        format.html { redirect_to(@torrent, :notice => 'Torrent was successfully created.') }
+        format.xml { render :xml => @torrent, :status => :created, :location => @torrent }
+        format.json { render :json => @torrent, :status => :created, :location => @torrent }
+      else
+        format.html { render(:action => 'new') }
+        format.xml { render :xml => @torrent.errors, :status => :unprocessable_entity }
+        format.json { render :json => @torrent.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
+  def destroy
+    @torrent = Torrent.find(params[:id])
+    @torrent.destroy
+    
+    respond_to do |format|
+      format.html { redirect_to(torrents_url) }
+      format.xml { head :ok }
+      format.json { head :ok }
+    end
+  end
+  
   def index
     @torrents = Torrent.all
     
@@ -57,6 +85,22 @@ class TorrentsController < ApplicationController
       format.html { render :partial => "torrent", :layout => :application }
       format.xml  { render :xml => @torrent }
       format.json  { render :json => @torrent }
+    end
+  end
+  
+  def update
+    @torrent = Torrent.find(params[:id])
+    
+    respond_to do |format|
+      if @torrent.update_attributes(params[:torrent])
+        format.html { redirect_to(@torrent, :notice => 'Torrent was successfully updated.') }
+        format.xml { render :xml => @torrent, :status => :created, :location => @torrent }
+        format.json { render :json => @torrent, :status => :created, :location => @torrent }
+      else
+        format.html { render(:action => 'edit') }
+        format.xml { render :xml => @torrent.errors, :status => :unprocessable_entity }
+        format.json { render :json => @torrent.errors, :status => :unprocessable_entity }
+      end
     end
   end
 end

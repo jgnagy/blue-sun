@@ -2,3 +2,6 @@
 db/*.sqlite3
 log/*.log
 tmp/
+.*.sw[a-z]
+*.un~
+Session.vim

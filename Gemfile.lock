@@ -89,6 +89,7 @@ PLATFORMS
   java
 
 DEPENDENCIES
+  activerecord-jdbc-adapter
   activerecord-jdbcmysql-adapter
   devise
   jdbc-mysql

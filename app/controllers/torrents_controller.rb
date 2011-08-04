@@ -1,4 +1,21 @@
 class TorrentsController < ApplicationController
+  
+  before_filter :authenticate_user!
+  
+  def add_comment
+    @torrent = Torrent.find(params[:id])
+    @comment = params[:comment]
+    
+    @torrent.tags << Comment.find_or_create_by_name(@comment, :user_id => current_user.id)
+    @torrent.save
+    
+    respond_to do |format|
+      format.html { render :partial => "torrent" }
+      format.xml  { render :xml => @torrent }
+      format.json  { render :json => @torrent }
+    end
+  end
+  
   def index
     @torrents = Torrent.all
     
@@ -6,6 +23,15 @@ class TorrentsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @torrents }
       format.json  { render :json => @torrents }
+    end
+  end
+  
+  def new
+    @torrent = Torrent.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @torrent }
+      format.json  { render :json => @torrent }
     end
   end
   
@@ -29,20 +55,6 @@ class TorrentsController < ApplicationController
     
     respond_to do |format|
       format.html { render :partial => "torrent", :layout => :application }
-      format.xml  { render :xml => @torrent }
-      format.json  { render :json => @torrent }
-    end
-  end
-  
-  def add_comment
-    @torrent = Torrent.find(params[:id])
-    @comment = params[:comment]
-    
-    @torrent.tags << Comment.find_or_create_by_name(@comment, :user_id => current_user.id)
-    @torrent.save
-    
-    respond_to do |format|
-      format.html { render :partial => "torrent" }
       format.xml  { render :xml => @torrent }
       format.json  { render :json => @torrent }
     end

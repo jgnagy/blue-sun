@@ -82,18 +82,18 @@ h1 {
 	padding-left: 10px;
 	/* width: 150px; */
 	float: right;
-	background: #fff url("/images/navbar_left.png") top left no-repeat;
+	background: #fff url("/bluesun/images/navbar_left.png") top left no-repeat;
 }
 
 #nav_menu {
 	height: 38px;
 	padding-right: 10px;
-	background: #fff url("/images/navbar_right.png") top right no-repeat;
+	background: #fff url("/bluesun/images/navbar_right.png") top right no-repeat;
 }
 
 #nav_menu_items {
 	height: 38px;
-	background: #fff url("/images/navbar_bg.png");
+	background: #fff url("/bluesun/images/navbar_bg.png");
 	margin: 0px;
 }
 

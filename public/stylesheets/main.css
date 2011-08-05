@@ -97,9 +97,17 @@ h1 {
 	margin: 0px;
 }
 
-.nav_section, .search_input {
+.nav_section {
 	display: inline-block;
 	padding-top: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+}
+
+.search_input {
+	display: inline-block;
+	padding-top: 10px;
 	padding-left: 5px;
 	padding-right: 5px;
 	float: left;
@@ -131,8 +139,7 @@ h1 {
 }
 
 #search_menu {
-	display: inline-block;
-	float: left;
+	display: inline;
 }
 
 img.links {

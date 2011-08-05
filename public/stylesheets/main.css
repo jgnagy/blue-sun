@@ -103,6 +103,7 @@ h1 {
 	padding-left: 5px;
 	padding-right: 5px;
 	float: left;
+	font-size: small;
 }
 
 .search_input {
@@ -110,10 +111,11 @@ h1 {
 	padding-top: 10px;
 	padding-left: 5px;
 	padding-right: 5px;
+	height: 38px;
 	float: left;
 }
 
-.nav_section:hover, .search_input:hover {
+.nav_section:hover {
 	display: inline-block;
 	padding-top: 8px;
 	padding-left: 5px;

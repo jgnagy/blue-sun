@@ -80,7 +80,7 @@ module ApplicationHelper
   end # def action_link
 
   def back_img_link(options = {})
-    "<span class='delete_img_link' >" + link_to(
+    raw "<span class='delete_img_link' >" + link_to(
       image_tag(
         "gnome/gnome-emblem-back.png",
         :class => 'links',

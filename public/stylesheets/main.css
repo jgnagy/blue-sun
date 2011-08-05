@@ -91,13 +91,13 @@ h1 {
 	background: #fff url("/bluesun/images/navbar_right.png") top right no-repeat;
 }
 
-#nav_menu_items {
+#nav_menu_items, #search_menu {
 	height: 38px;
 	background: #fff url("/bluesun/images/navbar_bg.png");
 	margin: 0px;
 }
 
-.nav_section {
+.nav_section, .search_input {
 	display: inline-block;
 	padding-top: 8px;
 	padding-left: 5px;
@@ -105,7 +105,7 @@ h1 {
 	float: left;
 }
 
-.nav_section:hover {
+.nav_section:hover, .search_input:hover {
 	display: inline-block;
 	padding-top: 8px;
 	padding-left: 5px;
@@ -130,8 +130,17 @@ h1 {
 	float: left;
 }
 
+#search_menu {
+	display: inline-block;
+	float: left;
+}
+
 img.links {
 	width: 24px;
+}
+
+img.search_logo {
+	width: 16px;
 }
 
 #footer {

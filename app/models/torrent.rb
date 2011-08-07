@@ -1,4 +1,5 @@
 class Torrent < ActiveRecord::Base
+  require 'digest/md5'
   belongs_to :user
   has_many :comments
   has_many :ratings
@@ -10,5 +11,9 @@ class Torrent < ActiveRecord::Base
     raw_avg = ratings.average(:value)
     decimal = raw_avg % 1
     return decimal > 0.5 ? (raw_avg - decimal) + 0.5 : raw_avg - decimal
+  end
+  
+  def current_torrent
+    return Digest::MD5.hexdigest(File.read(filename.current_path))
   end
 end

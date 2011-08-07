@@ -23,6 +23,7 @@ class TorrentsController < ApplicationController
     respond_to do |format|
       if @torrent.save
         # TODO: perform some indexing in SOLR / lucene / sphinx at some point
+        # TODO: add a hash of the file
         format.html { redirect_to(@torrent, :notice => 'Torrent was successfully created.') }
         format.xml { render :xml => @torrent, :status => :created, :location => @torrent }
         format.json { render :json => @torrent, :status => :created, :location => @torrent }

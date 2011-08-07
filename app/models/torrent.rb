@@ -13,7 +13,7 @@ class Torrent < ActiveRecord::Base
     return decimal > 0.5 ? (raw_avg - decimal) + 0.5 : raw_avg - decimal
   end
   
-  def current_torrent
+  def current_hash
     return Digest::MD5.hexdigest(File.read(filename.current_path))
   end
 end

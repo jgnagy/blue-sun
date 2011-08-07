@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   has_many :torrents
   has_many :comments
   has_many :ratings
+  
+  def name
+    return email.match(/^([^@]+)@/)[1]
+  end
 end

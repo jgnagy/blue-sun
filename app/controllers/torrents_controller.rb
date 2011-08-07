@@ -18,6 +18,7 @@ class TorrentsController < ApplicationController
   
   def create
     @torrent = Torrent.new(params[:torrent])
+    @torrent.user_id = current_user.id
     
     respond_to do |format|
       if @torrent.save

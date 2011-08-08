@@ -1,19 +1,19 @@
 <h2 class="torrent_title"><%= @torrent.name %></h2>
 <div class="torrent_info">
   <div class="torrent_info_row">
-    <%= label_tag :name %><span id="name" class="info_value"><%= @torrent.name %></span>
+    <%= label_tag :name %>: <span id="name" class="info_value"><%= @torrent.name %></span>
   </div>
   <div class="torrent_info_row">
-    <%= label_tag :added_by %><span id="added_by" class="info_value"><%= @torrent.user.email %></span>
+    <%= label_tag :added_by %>: <span id="added_by" class="info_value"><%= @torrent.user.email %></span>
   </div>
   <div class="torrent_info_row">
-    <%= label_tag :created_at %><span id="created_at" class="info_value"><%= @torrent.created_at %></span>
+    <%= label_tag :created_at %>: <span id="created_at" class="info_value"><%= @torrent.created_at %></span>
   </div>
   <div class="torrent_info_row">
-    <%= label_tag :hash %><span id="hash" class="info_value"><%= @torrent.current_hash %></span>
+    <%= label_tag :hash %>: <span id="hash" class="info_value"><%= @torrent.current_hash %></span>
   </div>
   <div class="torrent_info_row">
-    <%= label_tag :filename %><span id="filename" class="info_value"><%= @torrent.filename %></span>
+    <%= label_tag :filename %>: <span id="filename" class="info_value"><%= @torrent.filename %></span>
   </div>
   <div class="torrent_links_row">
     <%= action_link :download, @torrent %>

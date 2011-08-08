@@ -33,6 +33,9 @@ gem 'carrierwave'
 # Add RubyTorrent for .torrent stuff (mostly MetaInfo)
 gem 'rubytorrent'
 
+# The BEncode gem to allow spewing out new, updated torrent files
+gem 'bencode'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:

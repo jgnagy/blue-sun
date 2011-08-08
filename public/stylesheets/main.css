@@ -119,10 +119,6 @@ h1 {
     margin-bottom: 5px;
 }
 
-.search_logo img {
-	padding-top:2px ;
-}
-
 #search_menu {
 	display: inline-block;
 	float: left;
@@ -163,6 +159,7 @@ img.links {
 
 img.search_logo {
 	width: 16px;
+	padding-top:2px;
 }
 
 #footer {

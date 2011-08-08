@@ -15,7 +15,7 @@
 			    <span class="nav_section"><%= link_to "Tags", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
 			    <span class="nav_section"><%= link_to "Admin", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
 		      <div id="search_menu">
-		        <% form_tag url_for(:controller => "torrents", :action => 'search' ), :method => :get, :id => "search" do |f| %>
+		        <% form_tag search_torrents_path, :method => :get, :id => "search" do |f| %>
 		          <div class="search_box">
 		            <input type="hidden" name="hl" value="en" />
                 <%= text_field_tag 'q', nil, :class => 'fh disable_form_history search_field', :placeholder => 'search...' %>

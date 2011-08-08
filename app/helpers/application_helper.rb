@@ -47,6 +47,24 @@ module ApplicationHelper
             :title => 'Show'
           ) + "#{options[:text]}",
         path, :class => options[:class] ? options[:class] : "action_link" )
+      when "magnet", :magnet
+        link_to( 
+          image_tag(
+            "magnet.png",
+            :class => 'links',
+            :alt => 'Magnet Link',
+            :title => 'Magnet Link'
+          ) + "#{options[:text]}",
+        path, :class => options[:class] ? options[:class] : "action_link" )
+      when "download", :download
+        link_to( 
+          image_tag(
+            "gnome/gnome-document-save.png",
+            :class => 'links',
+            :alt => 'Download Link',
+            :title => 'Download Link'
+          ) + "#{options[:text]}",
+        path, :class => options[:class] ? options[:class] : "action_link" )
       when "submit", :submit
         link_to( 
           image_tag(

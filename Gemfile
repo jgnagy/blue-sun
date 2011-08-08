@@ -30,6 +30,9 @@ gem 'warbler'
 # Add CarrierWave for file attachments
 gem 'carrierwave'
 
+# Add RubyTorrent for .torrent stuff (mostly MetaInfo)
+gem 'rubytorrent'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:

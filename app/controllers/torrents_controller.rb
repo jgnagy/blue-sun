@@ -84,7 +84,7 @@ class TorrentsController < ApplicationController
     @torrent = Torrent.find(params[:id])
     
     respond_to do |format|
-      format.html { render :partial => "torrent", :layout => :application }
+      format.html
       format.xml  { render :xml => @torrent }
       format.json  { render :json => @torrent }
     end

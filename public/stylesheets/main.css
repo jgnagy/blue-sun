@@ -106,7 +106,7 @@ h1 {
 	font-size: small;
 }
 
-#main_search {
+.search_box {
 	display: inline-block;
 	padding-top: 10px;
 	padding-left: 5px;

@@ -46,6 +46,11 @@ class TorrentsController < ApplicationController
     end
   end
   
+  def download
+    @torrent = Torrent.find(params[:id])
+    send_file @torrent.filename.current_path
+  end
+  
   def index
     @torrents = Torrent.all
     

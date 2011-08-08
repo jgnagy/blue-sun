@@ -4,6 +4,9 @@ BlueSun::Application.routes.draw do
     collection do
       get 'search'
     end
+    member do
+      get 'download'
+    end
   end
 
   devise_for :users

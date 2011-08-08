@@ -64,7 +64,7 @@ module ApplicationHelper
             :alt => 'Download Link',
             :title => 'Download Link'
           ) + "#{options[:text]}",
-        path, :class => options[:class] ? options[:class] : "action_link" )
+        download_torrent_path(path), :class => options[:class] ? options[:class] : "action_link" )
       when "submit", :submit
         link_to( 
           image_tag(

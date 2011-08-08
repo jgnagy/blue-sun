@@ -16,7 +16,7 @@
     <%= label_tag :filename %><span id="filename" class="info_value"><%= @torrent.filename %></span>
   </div>
   <div class="torrent_links_row">
-    <%= action_link :download, @torrent.filename_url %>
+    <%= action_link :download, @torrent %>
     <% if @torrent.magnet_available? %>
       <%= action_link :magnet, @torrent.magnet_link %>
     <% end %>

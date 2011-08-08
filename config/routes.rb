@@ -1,7 +1,10 @@
 BlueSun::Application.routes.draw do
   
-  match 'torrents/search' => 'torrents#search', :as => :torrent_search
-  resources :torrents
+  resources :torrents do
+    collection do
+      get 'search'
+    end
+  end
 
   devise_for :users
 

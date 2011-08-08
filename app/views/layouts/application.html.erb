@@ -15,9 +15,13 @@
 			    <span class="nav_section"><%= link_to "Tags", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
 			    <span class="nav_section"><%= link_to "Admin", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
 		      <div id="search_menu">
-		        <span id="search_form">
-              <span id="search_input"><%= text_field_tag 'q' %></span><%= image_tag 'gnome/gnome-system-search.png', :class => 'search_logo' %>
-            </span>
+		        <% form_tag url_for(:controller => "torrents", :action => 'search' ), :method => :get, :id => "search" do |f| %>
+		          <div class="search_box">
+		            <input type="hidden" name="hl" value="en" />
+                <%= text_field_tag id="main_search" name="q" class='fh disable_form_history search_field' %>
+                <%= link_to image_tag("gnome/gnome-system-search.png", :class => 'search_logo', :alt => "Search", :title => "Search"), 'javascript:document.forms.search.submit();' %>
+              </div>
+            <% end %>
           </div>
         </div>
 	    </div>

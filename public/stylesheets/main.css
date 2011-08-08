@@ -106,12 +106,17 @@ h1 {
 	font-size: small;
 }
 
-.search_input {
+#main_search {
 	display: inline-block;
 	padding-top: 10px;
 	padding-left: 5px;
 	padding-right: 5px;
 	float: left;
+}
+
+.search_field {
+  width: 150px;
+  margin-bottom: 5px;
 }
 
 .search_input #q {

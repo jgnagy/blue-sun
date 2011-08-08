@@ -2,13 +2,12 @@
   <tr>
     <th>Name</th>
     <th>Added By</th>
-    <th>Hash</th>
+    <th>Actions</th>
   </tr>
 <% @torrents.each do |t| %>
   <tr>
     <td><%= t.name %></td>
     <td><%= t.user.name %></td>
-    <td><%= t.current_hash %></td>
     <td><%= action_link :show, t %></td>
   </tr>
 <% end %>

@@ -14,6 +14,6 @@ class Torrent < ActiveRecord::Base
   end
   
   def current_hash
-    return Digest::MD5.hexdigest(File.read(filename.current_path))
+    return Digest::MD5.file(filename.current_path)
   end
 end

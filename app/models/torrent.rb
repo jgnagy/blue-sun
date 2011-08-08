@@ -17,12 +17,16 @@ class Torrent < ActiveRecord::Base
     return Digest::MD5.file(filename.current_path)
   end
   
-  def btih
-    torrent_info = RubyTorrent::MetaInfo.from_location(filename.current_path)
-    return torrent_info.hash
+  def magnet_available?
+    return false
   end
   
-  def magnet_link
-    return "magnet:?xt=urn:btih:#{btih}"
-  end
+  #def btih
+  #  torrent_info = RubyTorrent::MetaInfo.from_location(filename.current_path)
+  #  return torrent_info.hash
+  #end
+  
+  #def magnet_link
+  #  return "magnet:?xt=urn:btih:#{btih}"
+  #end
 end

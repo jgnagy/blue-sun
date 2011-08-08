@@ -3,5 +3,5 @@ Available Torrents
 <%= render 'torrents' %>
 
 <div id="page_links">
-  <span class="page_link">Create a <%= link_to 'New Torrent', :action => :new %></span>
+  <span class="page_link">Create a <%= action_link :new, new_torrent_path, :text => 'New Torrent' %></span>
 </div>

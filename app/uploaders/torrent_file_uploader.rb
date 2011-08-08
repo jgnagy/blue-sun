@@ -15,7 +15,7 @@ class TorrentFileUploader < CarrierWave::Uploader::Base
   def store_dir
     upload_dir = "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
     if ENV['BLUESUN_HOME']
-      upload_dir = "#{ENV['BLUESUN_HOME']}/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+      upload_dir = "#{ENV['BLUESUN_HOME']}/data/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
     end
     return upload_dir
   end

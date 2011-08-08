@@ -21,6 +21,10 @@ class Torrent < ActiveRecord::Base
     return false
   end
   
+  def short_filename
+    return filename.current_path.match(/([^\/]+\.torrent)$/)[1]
+  end
+  
   #def btih
   #  torrent_info = RubyTorrent::MetaInfo.from_location(filename.current_path)
   #  return torrent_info.hash

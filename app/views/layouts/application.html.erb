@@ -18,7 +18,7 @@
 		        <% form_tag url_for(:controller => "torrents", :action => 'search' ), :method => :get, :id => "search" do |f| %>
 		          <div class="search_box">
 		            <input type="hidden" name="hl" value="en" />
-                <%= text_field_tag 'q', :class => 'fh disable_form_history search_field', :placeholder => 'search...' %>
+                <%= text_field_tag 'q', nil, :class => 'fh disable_form_history search_field', :placeholder => 'search...' %>
                 <%= link_to image_tag("gnome/gnome-system-search.png", :class => 'search_logo', :alt => "Search", :title => "Search"), 'javascript:document.forms.search.submit();' %>
               </div>
             <% end %>

@@ -108,7 +108,7 @@ h1 {
 
 .search_box {
 	display: inline-block;
-	padding-top: 10px;
+	padding-top: 7px;
 	padding-left: 5px;
 	padding-right: 5px;
 	float: left;
@@ -117,6 +117,10 @@ h1 {
 .search_field {
     width: 150px;
     margin-bottom: 5px;
+}
+
+.search_logo img {
+	padding-top:2px ;
 }
 
 #search_menu {

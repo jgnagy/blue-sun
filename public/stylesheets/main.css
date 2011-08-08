@@ -115,12 +115,13 @@ h1 {
 }
 
 .search_field {
-  width: 150px;
-  margin-bottom: 5px;
+    width: 150px;
+    margin-bottom: 5px;
 }
 
-.search_input #q {
-	height: 14px;
+#search_menu {
+	display: inline-block;
+	float: left;
 }
 
 .nav_section:hover {

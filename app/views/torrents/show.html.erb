@@ -1,7 +1,7 @@
 <h1 class="torrent_title"><%= @torrent.name %></h1>
 <div class="torrent_info">
   <div class="torrent_info_row">
-    <%= label_tag :name, "Torrent Name:", :class => "info_label" %>: <span id="name" class="info_value"><%= @torrent.name %></span>
+    <%= label_tag :name, "Torrent Name:", :class => "info_label" %> <span id="name" class="info_value"><%= @torrent.name %></span>
   </div>
   <div class="torrent_info_row">
     <%= label_tag :added_by, "User:", :class => "info_label" %> <span id="added_by" class="info_value"><%= @torrent.user.email %></span>
@@ -14,7 +14,7 @@
   </div>
   <div class="torrent_info_row">
     <%= label_tag :filename, "Torrent File:", :class => "info_label" %> <span id="filename" class="info_value"><%= @torrent.short_filename %></span>
-    <%= action_link :download, @torrent %>
+    <%= action_link :download, @torrent, :class => "action_download" %>
     <% if @torrent.magnet_available? %>
       <%= action_link :magnet, @torrent.magnet_link %>
     <% end %>

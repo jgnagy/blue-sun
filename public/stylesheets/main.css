@@ -177,6 +177,10 @@ img.search_logo {
 	font-style: italic;
 }
 
+.action_download {
+	float: left;
+}
+
 .info_label {
-	font-style: bold;
+	font-weight: bold;
 }

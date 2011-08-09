@@ -73,7 +73,10 @@ class TorrentsController < ApplicationController
   def search
     @query = params[:q]
     if @query and @query != "all"
-      @torrents = Torrent.where("torrents.name LIKE :query", { :query => "%#{@query}%" })
+      #@torrents = Torrent.where("torrents.name LIKE :query", { :query => "%#{@query}%" })
+      @torrents = Torrent.search(:include => [:comments]) do
+        keywords(@query)
+      end
     else
       @torrents = Torrent.all
     end

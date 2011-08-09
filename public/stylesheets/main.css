@@ -153,6 +153,10 @@ h1 {
 	display: inline;
 }
 
+#hash {
+	font-family: 'Andale Mono', 'Courier New', 'Terminal', monospace;
+}
+
 img.links {
 	width: 24px;
 }
@@ -168,4 +172,8 @@ img.search_logo {
 
 #footer .disclaimer {
 	font-style: italic;
+}
+
+.torrent_info_row label {
+	font-style: bold;
 }

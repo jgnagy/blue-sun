@@ -13,6 +13,7 @@ body {
 	margin: 0 auto;
 	width: 940px;
 	font: 13px/22px Calibri, Helvetica, Verdana, sans-serif;
+	background: #f0f0f0;
 }
 
 table {
@@ -60,15 +61,85 @@ h1 {
 	color: #009ddc;
 }
 
-/* Custom Elements */
-#main {
-	width: 1000px;
-	/* TODO: Set a background */
-	padding-top: 3em;
-	padding-left: 2em;
-	margin-left: auto;
-	margin-right: auto;
+h2 {
+	font-size: 28px;  
+	line-height: 44px;  
+	padding: 22px 0;
 }
+
+h3 {  
+    font-size: 18px;  
+    line-height: 22px;  
+    padding: 11px 0;  
+}  
+  
+p {  
+    padding-bottom: 22px;  
+}
+
+nav {  
+    position: absolute;  
+    left: 0;  
+    width: 100%;  
+    background: url("/bluesun/images/navbar_bg.png");  
+}
+
+nav ul {  
+    margin: 0 auto;  
+    width: 940px;  
+    list-style: none;  
+}
+
+nav ul li {  
+    float: left;  
+}  
+  
+    nav ul li a {  
+        display: block;  
+        margin-right: 20px;  
+        width: 140px;  
+        font-size: 14px;  
+        line-height: 44px;  
+        text-align: center;  
+        text-decoration: none;  
+        color: #777;  
+    }  
+  
+        nav ul li a:hover {  
+            color: #fff;  
+        }  
+  
+        nav ul li.selected a {  
+            color: #fff;  
+        }  
+  
+        nav ul li.subscribe a {  
+            margin-left: 22px;  
+            padding-left: 33px;  
+            text-align: left;  
+            background: url("rss.png") left center no-repeat;  
+        }
+
+#content {  
+    display: table;  
+}  
+
+    #mainContent {  
+        display: table-cell;  
+        width: 620px;  
+        padding-right: 22px;  
+    }  
+
+    aside {  
+        display: table-cell;  
+        width: 300px;  
+    }
+
+footer .disclaimer {
+	font-style: italic;
+}
+
+/* Custom Elements */
 
 #user_info {
 	text-align: right;
@@ -77,40 +148,10 @@ h1 {
 }
 
 #user_info .user_email {
-	font-size: 0.9em;
-}
-
-#content {
-	width: 830px;
-	float: left;
-}
-
-#nav {
-	margin-top: -3em;
-	padding-left: 10px;
-	/* width: 150px; */
-	float: right;
-	background: #fff url("/bluesun/images/navbar_left.png") top left no-repeat;
-}
-
-#nav_menu {
-	height: 38px;
-	padding-right: 10px;
-	background: #fff url("/bluesun/images/navbar_right.png") top right no-repeat;
-}
-
-#nav_menu_items, #search_menu {
-	height: 38px;
-	background: #fff url("/bluesun/images/navbar_bg.png");
-	margin: 0px;
+	font-size: small;
 }
 
 .nav_section {
-	display: inline-block;
-	padding-top: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
-	float: left;
 	font-weight: bold;
 	font-size: small;
 }
@@ -134,11 +175,7 @@ h1 {
 }
 
 .nav_section:hover {
-	display: inline-block;
-	padding-top: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
-	float: left;
+	/* TODO: Color the selected nav item */
 }
 
 .nav_section a {
@@ -148,18 +185,6 @@ h1 {
 .nav_section a:hover {
 	text-decoration: underline;
 	/* color: #009ddc; */
-}
-
-.nav_rule {
-	padding-top: 10px;
-	padding-left: 3px;
-	padding-right: 3px;
-	height: 18px;
-	float: left;
-}
-
-#search_menu {
-	display: inline;
 }
 
 #hash {
@@ -175,14 +200,6 @@ img.links {
 img.search_logo {
 	width: 16px;
 	padding-top:2px;
-}
-
-#footer {
-	clear: both;
-}
-
-#footer .disclaimer {
-	font-style: italic;
 }
 
 .action_download {

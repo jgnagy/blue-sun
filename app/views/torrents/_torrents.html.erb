@@ -7,7 +7,10 @@
 <% if @torrents.kind_of?(Sunspot::Search::StandardSearch) %>
   <% @torrents.each_hit_with_result do |hit,t| %>
   <tr>
-    <td><%= t.name %> <span class="hit_score">(<%= hit.score %>)</span></td>
+    <td><%= t.name %> <% unless hit.nil? %>
+      <span class="hit_score">(<%= hit.score %>)</span>
+      <% end %>
+    </td>
     <td><%= t.user.name %></td>
     <td><%= action_link :show, t %></td>
   </tr>

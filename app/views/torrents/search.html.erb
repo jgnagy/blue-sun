@@ -1,4 +1,4 @@
-<% if @torrents.empty? %>
+<% if @torrents.total < 1 %>
   No torrents found containing '<%= @query %>'
 <% else %>
   <%= render 'torrents' %>

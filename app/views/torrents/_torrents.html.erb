@@ -4,11 +4,21 @@
     <th>Added By</th>
     <th>Actions</th>
   </tr>
-<% @torrents.each do |t| %>
+<% if @torrents.kind_of?(Sunspot::Search::StandardSearch) %>
+  <% @torrents.each_hit_with_result do |hit,t| %>
+  <tr>
+    <td><%= t.name %> <span class="hit_score">(<%= hit.score %>)</span></td>
+    <td><%= t.user.name %></td>
+    <td><%= action_link :show, t %></td>
+  </tr>
+  <% end %>
+<% else %>
+  <% @torrents.each do |t| %>
   <tr>
     <td><%= t.name %></td>
     <td><%= t.user.name %></td>
     <td><%= action_link :show, t %></td>
   </tr>
+  <% end %>
 <% end %>
 </table>

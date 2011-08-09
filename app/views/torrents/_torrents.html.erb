@@ -8,7 +8,7 @@
   <% @torrents.each_hit_with_result do |hit,t| %>
   <tr>
     <% if !hit.nil? %>
-    <td title=<%= "\"#{hit.score * 100}%\"" %>>
+    <td title="<%= "#{hit.score * 100}%" %>">
     <% else %>
     <td>
     <% end %>

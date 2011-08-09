@@ -8,7 +8,7 @@
   <% @torrents.each_hit_with_result do |hit,t| %>
   <tr>
     <td><%= t.name %> <% unless hit.nil? %>
-      <span class="hit_score">(<%= hit.score %>)</span>
+      <span class="hit_score">(<%= hit.score * 100 %>%)</span>
       <% end %>
     </td>
     <td><%= t.user.name %></td>

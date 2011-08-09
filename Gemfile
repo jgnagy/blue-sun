@@ -36,6 +36,9 @@ gem 'rubytorrent'
 # The BEncode gem to allow spewing out new, updated torrent files
 gem 'bencode'
 
+# Add sunspot for fulltext search using Solr
+gem 'sunspot_rails'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:

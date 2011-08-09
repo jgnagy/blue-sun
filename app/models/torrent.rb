@@ -26,7 +26,7 @@ class Torrent < ActiveRecord::Base
   end
   
   searchable do
-    string :name, :default_boost => 2
+    text :name, :default_boost => 2
     text :filename
     string :hash
     text :details

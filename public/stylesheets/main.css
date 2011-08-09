@@ -156,10 +156,6 @@ h1 {
 
 #hash {
 	font-family: 'Andale Mono', 'Courier New', 'Terminal', monospace;
-}
-
-.hit_score {
-	font-family: 'Andale Mono', 'Courier New', 'Terminal', monospace;
 	font-size: small;
 	color: #aaa;
 }
@@ -181,6 +177,6 @@ img.search_logo {
 	font-style: italic;
 }
 
-.torrent_info_row label {
+.info_label {
 	font-style: bold;
 }

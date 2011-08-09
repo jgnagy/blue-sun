@@ -1,10 +1,18 @@
 /* Global Elements */
+{
+	margin: 0;
+	padding: 0;
+}
+
+header, footer, aside, nav, article {
+	display: block;
+}
+
 body {
 	/* TODO: Set a background */
-	margin: 0px;
-	padding: 0px;
-	padding-top: 20px;
-	font-family: "Calibri", "Helvetica", "Verdana", Sans-serif;
+	margin: 0 auto;
+	width: 940px;
+	font: 13px/22px Calibri, Helvetica, Verdana, sans-serif;
 }
 
 table {

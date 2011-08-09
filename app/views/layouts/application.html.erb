@@ -6,15 +6,16 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
-  <div id="main">
-    <div id="nav">
-	    <div id="nav_menu">
-		    <div id="nav_menu_items">
-			    <span class="nav_section"><%= link_to "Torrents", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
-			    <span class="nav_section"><%= link_to "Tags", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
-			    <span class="nav_section"><%= link_to "Admin", torrents_path %></span><%= image_tag "nav_rule.png", :class => "nav_rule" %>
-		      <div id="search_menu">
+  <body>
+    <header>
+      <h1>BlueSun Torrent Index</h1>
+    </header>
+    <nav>
+	    <ul id="nav_menu">
+			    <li class="nav_section"><%= link_to "Torrents", torrents_path %></li>
+			    <li class="nav_section"><%= link_to "Tags", torrents_path %></li>
+			    <li class="nav_section"><%= link_to "Admin", torrents_path %></li>
+		      <li id="search_menu" class="nav_section">
 		        <% form_tag search_torrents_path, :method => :get, :id => "search" do |f| %>
 		          <div class="search_box">
 		            <input type="hidden" name="hl" value="en" />
@@ -22,17 +23,10 @@
                 <%= link_to image_tag("gnome/gnome-system-search.png", :class => 'search_logo', :alt => "Search", :title => "Search"), 'javascript:document.forms.search.submit();' %>
               </div>
             <% end %>
-          </div>
-        </div>
-	    </div>
-    </div>
-	  <div id="user_info">
-		<% if user_signed_in? %>
-			Signed in as <span class="user_email"><%= current_user.email %></span>. <br />
-			Not you? <%= action_link :sign_out, destroy_user_session_path, :text => "Sign Out" %>
-		<% end %>
-	  </div>
-	  <div id="content">
+          </li>
+	    </ul>
+    </nav>
+	  <section id="content">
       <% if notice %>
       	<div id="flash_notice"><%= notice %></div>
       <% end%>
@@ -40,12 +34,20 @@
       	<div id="flash_alert"><%= alert %></div>
       <% end %>
 
-      <%= yield %>
-      
-    </div>
-    <div id="footer">
+      <div id="main_content">
+        <%= yield %>
+      </div>
+    </section>
+    <aside id="user_info">
+		<% if user_signed_in? %>
+		  <p>
+			Signed in as <span class="user_email"><%= current_user.email %></span>.<br />
+			Not you? <%= action_link "Sign Out", destroy_user_session_path %>
+			</p>
+		<% end %>
+	  </aside>
+    <footer>
   	  <span class="disclaimer">For authorized use only.</span>
-  	</div>
-  </div>
-</body>
+  	</footer>
+  </body>
 </html>

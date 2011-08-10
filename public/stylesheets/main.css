@@ -249,6 +249,20 @@ footer {
 
 /* Custom Elements */
 
+#user_info {
+	background: url("../images/userinfo_bg.png") repeat-x;
+	
+	/* Background-size not implemented yet */
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+
+	
+	/* Border-radius not implemented yet */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+}
+
 #user_info .user_email {
 	font-size: small;
 }

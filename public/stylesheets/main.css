@@ -315,7 +315,7 @@ footer {
 }
 
 img.links {
-	width: 24px;
+	width: 16px;
 }
 
 .search_logo {
@@ -324,7 +324,6 @@ img.links {
 }
 
 .action_download {
-	float: left;
 }
 
 .info_label {

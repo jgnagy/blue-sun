@@ -82,7 +82,7 @@ nav {
     position: absolute;  
     right: 0;  
     width: 100%;  
-    background: url("/bluesun/images/nav_background.png");  
+    background: url("../images/nav_background.png");  
 }
 
 nav ul {  
@@ -174,14 +174,14 @@ nav ul li {
 }  
 
     #main_content {  
-        display: table-cell;  
-        width: 620px;  
-        padding-right: 22px;  
+        display: table-cell;
+        width: 720px;
+        padding-right: 22px;
     }  
 
     aside {  
         display: table-cell;  
-        width: 300px;  
+        width: 200px;
     }
 
 footer .disclaimer {

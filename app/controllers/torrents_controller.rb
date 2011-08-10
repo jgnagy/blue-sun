@@ -52,6 +52,7 @@ class TorrentsController < ApplicationController
   end
   
   def index
+    @intro_text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
     @torrents = Torrent.all
     
     respond_to do |format|

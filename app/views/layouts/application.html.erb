@@ -26,13 +26,16 @@
           </li>
 	    </ul>
     </nav>
+    <% if @show_intro %>
     <section id="intro">
-    		<header>
-    			<h2>Torrents, anyone?</h2>
-    		</header>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    		<%= image_tag "blue_sun.jpg" %>
-    	</section>
+      <header>
+    		<h2>Torrents, anyone?</h2>
+    	</header>
+    	<% if @intro_text %>
+    		<p><%= @intro_text %></p>
+    	<% end %>
+    	<%= image_tag "blue_sun.jpg" %>
+    </section>
 	  <div id="content">
 	    <div id="main_content">
 	      <section id="main">
@@ -51,10 +54,6 @@
 		    <p>
 		      Signed in as <span class="user_email"><%= current_user.email %></span>.<br />
 		      Not you? <%= action_link "Sign Out", destroy_user_session_path %>
-		    </p>
-		    <% else %>
-		    <p>
-		      You are not signed in! You must sign in to continue.
 		    </p>
 		    <% end %>
 	    </aside>

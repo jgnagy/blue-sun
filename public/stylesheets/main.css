@@ -220,6 +220,7 @@ footer .disclaimer {
 #search_menu {
 	display: inline-block;
 	float: left;
+	padding-top: 5px;
 }
 
 .nav_section:hover {

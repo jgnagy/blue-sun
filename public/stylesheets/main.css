@@ -105,11 +105,12 @@ nav ul li {
         line-height: 44px;  
         text-align: center;  
         text-decoration: none;  
-        color: #777;  
+        color: #999;  
     }  
   
         nav ul li a:hover {  
-            color: #fff;  
+            color: #fff;
+			text-decoration: none;
         }  
   
         nav ul li.selected a {  
@@ -246,7 +247,7 @@ img.links {
 }
 
 .search_logo {
-	display: inline-block;
+	display: inline;
 }
 
 img.search_logo {

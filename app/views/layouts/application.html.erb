@@ -20,7 +20,7 @@
 		          <span class="search_box">
 		            <input type="hidden" name="hl" value="en" />
                 <%= text_field_tag 'q', nil, :class => 'fh disable_form_history search_field', :placeholder => 'Search...' %>
-                <%= link_to image_tag("gnome/gnome-system-search.png", :class => 'search_logo', :alt => "Search", :title => "Search"), 'javascript:document.forms.search.submit();' %>
+                <%= link_to image_tag("gnome/gnome-system-search.png", :alt => "Search", :title => "Search"), 'javascript:document.forms.search.submit();', :class => 'search_logo' %>
               </span>
             <% end %>
           </li>

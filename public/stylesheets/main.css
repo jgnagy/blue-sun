@@ -4,7 +4,7 @@
 	padding: 0;
 }
 
-header, footer, aside, nav, article {
+header, footer, section, aside, nav, article {
 	display: block;
 }
 
@@ -14,47 +14,7 @@ body {
 	width: 940px;
 	font: 13px/22px Calibri, Helvetica, Verdana, sans-serif;
 	background: #f0f0f0;
-}
-
-table {
-	border-collapse: collapse;
-	border: 1px solid #333;
-}
-
-table th, table td {
-	padding: 0.5em;
-	border: 1px dotted #666;
-	color: #191970;
-}
-
-table th {
-  	border-bottom: 2px solid #333;
-  	border-right: 2px solid #333;
-	color: #fff; 
-	background-color: #191970;
-}
-
-/* table tr:hover td {
-	background-color: #191970;
-	color: #fff;
-} */
-
-table caption {
-  	caption-side: bottom;
-  	font-size: 0.9em;
-  	font-style: italic;
-  	text-align: right;
-  	padding: 0.5em 0;
-}
-
-a {
-	text-decoration: none;
-	color: #009ddc;
-}
-
-a:hover {
-	text-decoration: underline;
-	color: navy;
+	padding: 22px 0;
 }
 
 h1 {
@@ -76,6 +36,49 @@ h3 {
 p {  
     padding-bottom: 22px;  
 }
+
+/* table {
+	border-collapse: collapse;
+	border: 1px solid #333;
+}
+
+table th, table td {
+	padding: 0.5em;
+	border: 1px dotted #666;
+	color: #191970;
+}
+
+table th {
+  	border-bottom: 2px solid #333;
+  	border-right: 2px solid #333;
+	color: #fff; 
+	background-color: #191970;
+} */
+
+/* table tr:hover td {
+	background-color: #191970;
+	color: #fff;
+} */
+
+/* table caption {
+  	caption-side: bottom;
+  	font-size: 0.9em;
+  	font-style: italic;
+  	text-align: right;
+  	padding: 0.5em 0;
+} */
+
+a {
+	text-decoration: none;
+	color: #009ddc;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: navy;
+}
+
+
 
 nav {  
     position: absolute;  
@@ -118,7 +121,54 @@ nav ul li {
             padding-left: 33px;  
             text-align: left;  
             background: url("rss.png") left center no-repeat;  
-        }
+		}
+
+#intro {
+	position: relative;
+	margin-top: 66px;
+	padding: 44px;
+	/* background: #467612 url("images/intro_background.png") repeat-x; */
+	background-color: #000;
+	
+	/* Background-size not implemented yet */
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+
+	
+	/* Border-radius not implemented yet */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+}
+
+	#intro h2, #intro p {
+		position: relative;
+		z-index: 9999;
+		width: 336px;
+	}
+	
+	#intro h2 {
+		padding: 0 0 22px 0;
+		font-weight: normal;
+		color: #fff;
+	}
+	
+	#intro p {
+		padding: 0;
+		color: #d9f499;
+	}
+	
+	#intro img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 653px;
+		height: 100%;
+	
+		/* Border-radius not implemented yet */
+		-moz-border-radius: 22px;
+		-webkit-border-radius: 22px;
+	}
 
 #content {  
     display: table;  

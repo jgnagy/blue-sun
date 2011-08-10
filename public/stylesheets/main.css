@@ -91,7 +91,7 @@ nav ul {
 }
 
 nav ul li {  
-    float: left;  
+    float: left; 
 }  
   
     nav ul li a {  
@@ -157,16 +157,14 @@ footer .disclaimer {
 }
 
 .search_box {
-	display: inline-block;
+	display: inline;
 	padding-top: 6px;
 	padding-left: 5px;
 	padding-right: 5px;
-	float: left;
 }
 
 .search_field {
     width: 150px;
-    margin-bottom: 5px;
 }
 
 #search_menu {

@@ -84,7 +84,7 @@ nav {
     position: absolute;  
     left: 0;  
     width: 100%;  
-    background: url("/bluesun/images/navbar_background.png");  
+    background: url("/bluesun/images/nav_background.png");  
 }
 
 nav ul {  
@@ -162,9 +162,8 @@ nav ul li {
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 653px;
+		/* width: 653px; */
 		height: 100%;
-	
 		/* Border-radius not implemented yet */
 		-moz-border-radius: 22px;
 		-webkit-border-radius: 22px;

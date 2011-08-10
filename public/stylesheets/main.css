@@ -248,11 +248,7 @@ img.links {
 
 .search_logo {
 	display: inline;
-}
-
-img.search_logo {
 	width: 16px;
-	padding-top:2px;
 }
 
 .action_download {

@@ -49,13 +49,15 @@
           <%= yield %>
         </section>
       </div>
-      <aside id="user_info">
+      <aside>
+        <section id="user_info">
 		    <% if user_signed_in? %>
 		    <p>
 		      Signed in as <span class="user_email"><%= current_user.email %></span>.<br />
 		      Not you? <%= action_link "Sign Out", destroy_user_session_path %>
 		    </p>
 		    <% end %>
+		    </section>
 	    </aside>
 	  </div>     
     <footer>

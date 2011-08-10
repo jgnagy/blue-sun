@@ -191,12 +191,6 @@ footer .disclaimer {
 
 /* Custom Elements */
 
-#user_info {
-	text-align: right;
-	margin-bottom: 10px;
-	float: right;
-}
-
 #user_info .user_email {
 	font-size: small;
 }

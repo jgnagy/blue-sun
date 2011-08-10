@@ -193,7 +193,7 @@ footer {
 	footer div {
 		display: table;
 		margin: 0 auto;
-		padding: 6px 0;
+		padding: 6px 0 15px;
 		width: 900px;
 		color: #777;
 	}

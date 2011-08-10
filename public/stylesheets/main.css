@@ -195,6 +195,10 @@ img.links {
 	width: 24px;
 }
 
+.search_logo {
+	display: inline-block;
+}
+
 img.search_logo {
 	width: 16px;
 	padding-top:2px;

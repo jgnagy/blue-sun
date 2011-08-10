@@ -17,11 +17,11 @@
 			    <li class="nav_section"><%= link_to "Admin", torrents_path %></li>
 		      <li id="search_menu" class="nav_section">
 		        <% form_tag search_torrents_path, :method => :get, :id => "search" do |f| %>
-		          <div class="search_box">
+		          <span class="search_box">
 		            <input type="hidden" name="hl" value="en" />
                 <%= text_field_tag 'q', nil, :class => 'fh disable_form_history search_field', :placeholder => 'Search...' %>
                 <%= link_to image_tag("gnome/gnome-system-search.png", :class => 'search_logo', :alt => "Search", :title => "Search"), 'javascript:document.forms.search.submit();' %>
-              </div>
+              </span>
             <% end %>
           </li>
 	    </ul>

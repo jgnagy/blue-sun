@@ -184,6 +184,10 @@ nav ul li {
         display: table-cell;  
         width: 200px;
 	}
+		aside p {
+			margin: 5px;
+			padding: 5px;
+		}
 footer {
 	position: absolute;
 	left: 0;

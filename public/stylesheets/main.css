@@ -188,12 +188,6 @@ footer {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	background: #222 url("../images/blue_sun.png") right center no-repeat;
-	
-	/* Background-size not implemented yet */
-	-webkit-background-size: 100%;
-	-o-background-size: 100%;
-	-khtml-background-size: 100%;
 }
 
 	footer div {
@@ -238,6 +232,17 @@ footer {
 		
 	footer .disclaimer {
 		font-style: italic;
+	}
+	
+	footer img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		/* width: 653px; */
+		height: 100%;
+		/* Border-radius not implemented yet */
+		-moz-border-radius: 22px;
+		-webkit-border-radius: 22px;
 	}
 
 /* Custom Elements */

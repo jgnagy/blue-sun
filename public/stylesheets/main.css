@@ -188,14 +188,19 @@ footer {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	background: #222;
+	background: #222 url("../images/blue_sun.png") right center no-repeat;
+	
+	/* Background-size not implemented yet */
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
 }
 
 	footer div {
 		display: table;
 		margin: 0 auto;
-		padding: 44px 0;
-		width: 940px;
+		padding: 6px 0;
+		width: 900px;
 		color: #777;
 	}
 	

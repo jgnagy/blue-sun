@@ -119,7 +119,7 @@ nav ul li {
             margin-left: 22px;  
             padding-left: 33px;  
             text-align: left;  
-            background: url("rss.png") left center no-repeat;  
+            background: url("../images/rss.png") left center no-repeat;  
 		}
 
 #intro {
@@ -170,7 +170,8 @@ nav ul li {
 	}
 
 #content {  
-    display: table;  
+    display: table;
+	margin-top: 70px;
 }  
 
     #main_content {  

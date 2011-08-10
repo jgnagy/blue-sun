@@ -15,6 +15,7 @@
 			    <li class="nav_section"><%= link_to "Torrents", torrents_path %></li>
 			    <li class="nav_section"><%= link_to "Tags", torrents_path %></li>
 			    <li class="nav_section"><%= link_to "Admin", torrents_path %></li>
+			    <li class="nav_section subscribe"><%= link_to "Subscribe", torrents_path %></li>
 		      <li id="search_menu" class="nav_section">
 		        <% form_tag search_torrents_path, :method => :get, :id => "search" do |f| %>
 		          <span class="search_box">
@@ -26,7 +27,7 @@
           </li>
 	    </ul>
     </nav>
-    <section id="intro">
+    <!-- <section id="intro">
       <header>
     		<h2>Torrents, anyone?</h2>
     	</header>
@@ -34,7 +35,7 @@
     		<p><%= @intro_text %></p>
     	<% end %>
     	<%= image_tag "blue_sun.jpg" %>
-    </section>
+    </section> -->
 	  <div id="content">
 	    <div id="main_content">
 	      <section id="main">

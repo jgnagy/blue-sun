@@ -189,13 +189,14 @@ footer {
 	left: 0;
 	width: 100%;
 	background-color: #000;
+	margin-top: 10px;
 }
 
 	footer div {
 		display: table;
 		margin: 0 auto;
 		padding: 6px 0 15px;
-		width: 900px;
+		width: 800px;
 		color: #777;
 	}
 	

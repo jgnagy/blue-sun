@@ -37,8 +37,35 @@ along with this program.  If not, see "http://www.gnu.org/licenses/":http://www.
 
 h2. Installation
 
-To install *{color:#00e}Blue Sun*, download the source and install any missing Ruby gems. Then, you need to configure the app to your liking (meaning edit "config/initializers/devise.rb" to match your configuration). After that, use @`rails`@ to start the server. More install info will be added later as there is actually something to run.
+To install *{color:#00e}Blue Sun* on Linux / OS X / any other Unix-like OS:
+# Install "JRuby":http://www.jruby.org/getting-started
+# Install a java app server like "Tomcat":http://tomcat.apache.org/tomcat-7.0-doc/setup.html, "Glassfish":http://glassfish.java.net/, "Jetty":http://www.mortbay.org/, or most others.
+# Install "Solr":http://lucene.apache.org/solr/ (probably in the same app server mentioned in the previous step)
+# Download the *{color:#00e}Blue Sun* source and install any missing Ruby gems.
+##  @`git clone git://github.com/jgnagy/blue-sun.git`@
+## @`cd blue-sun; jruby -S bundle install`@
+# You may need to configure the app for your environment. Usually that means modifying:
+## "config/initializers/devise.rb"
+## "config/sunspot.yml"
+## "config/database.yml"
+# Create the *{color:#00e}Blue Sun* WAR file
+## @`jruby -S rake war`@
+# Create the *{color:#00e}Blue Sun* database (this should be configured in "config/database.yml"):
+## @`jruby -S rake db:migrate RAILS_ENV=production`@
+# Create an environment variable to represent *{color:#00e}Blue Sun*'s home directory (this directory should exist and be owned by the user that your app server runs as):
+## @`export BLUESUN_HOME=/path/to/bluesun/home`@
+# Start your java app server. This varies by app server.
+# Solr should already be running at this point.
+# Deploy your newly created WAR file (should be "bluesun.war" under the *{color:#00e}Blue Sun* source directory). This varies by java app server.
+# Hit your app server's URL with the context of /bluesun/. (Usually something like "http://servername:8080/bluesun/")
+
+*This process may change as development continues.*
 
 h2. Project Status
 
-Currently, *{color:#00e}Blue Sun* does *nothing* it's supposed to, since it is nothing more than a base Rails 3 project. I'll update this section as I do more work on the project.
+Currently, *{color:#00e}Blue Sun* does does the following:
+* Allows uploading and downloading torrents (.torrent files)
+* Full-text search for torrent name and description through Solr
+* Looks pretty
+
+As you can see, I still have a long way to go.
